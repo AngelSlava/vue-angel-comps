@@ -1,0 +1,140 @@
+.nav-bar-filter {
+  padding: 0 1rem;
+  position: relative;
+  border-left: 1px solid #dcdfe6;
+  border-right: 1px solid #dcdfe6;
+  align-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #909399;
+  height: 100%;
+  .tag-list {
+    .el-tag {
+      margin-bottom: .2rem;
+      margin-right: .2rem;
+    }
+  }
+  .mr-1 {
+    margin-right: 1rem;
+  }
+  .link-mini {
+    font-weight: 400;
+  }
+  .nbf {
+    &__icon {
+      width: 22px;
+    }
+    &__main {
+      width: 100%;
+      //padding-left: .5rem;
+    }
+    &__panel {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      &--container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 2;
+        height: auto;
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+        border-top: 1px solid #dcdfe6;
+        background: white;
+        box-shadow: 0 8px 13px 0px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        .app-container {
+          height: 100%;
+          overflow: auto;
+          padding: .5rem;
+          background-color: #F4F6F8;
+        }
+        &-footer {
+          padding: .5rem 1rem;
+          text-align: right;
+        }
+      }
+    }
+    &__informer {
+      white-space: nowrap;
+    }
+    &__menu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        .el-link {
+          line-height: 2rem;
+          padding: 0 .5rem;
+          display: block;
+        }
+        + li {
+          border-top: 1px dotted #dcdfe6;
+        }
+        &.active {
+          position: relative;
+          .el-link {
+            padding-left: 1rem;
+          }
+          &:before {
+            content: '';
+            background-color: #1890ff;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            display: block;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+  .el-form-item--mini {
+    margin-bottom: .5rem;
+  }
+  .w-auto { width: auto; }
+  .invisible-input {
+    .el-textarea__inner {
+      border-color: transparent;
+    }
+    .el-input__inner {
+      border-color: transparent;
+    }
+  }
+  .el-form {
+    &.full-width {
+      .el {
+        &-select, &-input, &-date-editor {
+          width: 100%;
+        }
+        &-radio {
+          &-group {
+            display: flex;
+            width: 100%;
+          }
+          &-button {
+            display: block;
+            width: inherit;
+            &__inner {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
